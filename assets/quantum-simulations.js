@@ -202,14 +202,14 @@ function updateDoubleSlitSim() {
   ctx.fillRect(barrierX, slit2Center + slitWidth / 2, 5, canvas.height - (slit2Center + slitWidth / 2));
   
   // Draw detection screen
-  ctx.fillStyle = "#333";
+  ctx.fillStyle = "#d3d3d3";
   ctx.fillRect(canvas.width - 20, 0, 20, canvas.height);
   
   // Draw interference pattern
   for (let i = 0; i < pattern.length; i++) {
     if (pattern[i] > 0) {
-      const intensity = Math.min(pattern[i] * 5, 255);
-      ctx.fillStyle = `rgba(255, 255, 255, ${intensity / 255})`;
+      const intensity = Math.min(pattern[i] * 30, 255);
+      ctx.fillStyle = `rgba(0, 0, 0, ${intensity / 255})`;
       ctx.fillRect(canvas.width - 20, i, 20, 1);
     }
   }
