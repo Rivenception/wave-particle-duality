@@ -130,6 +130,18 @@ function resetWaveSim() {
   initWaveSim();
 }
 
+function toggleWaveSim() {
+  if (waveSimAnimationId) {
+    // If animation is running, stop it and reset time
+    cancelAnimationFrame(waveSimAnimationId);
+    waveSimAnimationId = null; // Reset animation ID
+    waveSimTime = 0;  // Reset time to 0 when stopped
+  } else {
+    // Start the animation
+    updateWaveSim();
+  }
+}
+
 // =============== DOUBLE-SLIT SIMULATION ===============
 let doubleSlitRunning = false;
 let particlesArray = [];
