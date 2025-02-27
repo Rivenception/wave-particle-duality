@@ -639,7 +639,7 @@ function drawWaveFunction(ctx, canvas, showProbability) {
 
 function resetWaveFunctionSim() {
   waveFunctionRunning = false;
-  document.getElementById("potentialType").value = "none";
+  document.getElementById("potentialTypeSim").value = "none-sim";
   document.getElementById("energyLevel").value = 1;
   document.getElementById("showProbability").checked = true;
   initWaveFunctionSim();
