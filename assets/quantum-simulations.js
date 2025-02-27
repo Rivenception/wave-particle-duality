@@ -58,6 +58,12 @@ function initWaveSim() {
 }
 
 function updateWaveSim() {
+  // Cancel ongoing animation
+  if (waveSimAnimationId) {
+    cancelAnimationFrame(waveSimAnimationId);
+    waveSimAnimationId = null; // Reset animation ID
+  }
+
   const canvas = document.getElementById("waveSimCanvas");
   const ctx = canvas.getContext("2d");
   const waveType = document.getElementById("waveType").value;
@@ -110,6 +116,13 @@ function updateWaveSim() {
 }
 
 function resetWaveSim() {
+  // Cancel ongoing animation
+  if (waveSimAnimationId) {
+    cancelAnimationFrame(waveSimAnimationId);
+    waveSimAnimationId = null; // Reset animation ID
+  }
+
+  // Reset waveSimTime and other values
   waveSimTime = 0;
   document.getElementById("waveType").value = "sine";
   document.getElementById("waveFreq").value = 5;
@@ -558,84 +571,6 @@ function drawWaveFunction(ctx, canvas, showProbability) {
     ctx.stroke();
   }
 }
-
-// function drawPotential(ctx, potentialType, canvas) {
-//     ctx.strokeStyle = "#999";
-//     ctx.setLineDash([5, 5]);
-//     ctx.beginPath();
-//     ctx.moveTo(0, canvas.height / 2);
-//     ctx.lineTo(canvas.width, canvas.height / 2);
-//     ctx.stroke();
-//     ctx.setLineDash([]);
-    
-//     ctx.fillStyle = "rgba(100, 100, 100, 0.2)";
-    
-//     switch (potentialType) {
-//       case "none-sim": // Free particle (zero potential)
-//         break;
-        
-//       case "harmonic-sim": // Harmonic oscillator
-//         ctx.beginPath();
-//         const harmonicScale = 50; // Added scaling factor
-//         for (let x = 0; x < canvas.width; x++) {
-//           const xNorm = x / canvas.width - 0.5;
-//           const potential = 100 * xNorm * xNorm;
-//           // Scale the potential to fit the canvas
-//           ctx.lineTo(x, canvas.height / 2 - potential * harmonicScale);
-//         }
-//         ctx.lineTo(canvas.width, canvas.height / 2);
-//         ctx.lineTo(0, canvas.height / 2);
-//         ctx.fill();
-//         break;
-        
-//       case "well-sim": // Infinite square well
-//         ctx.fillRect(0, 0, 0.1 * canvas.width, canvas.height); // Left side wall
-//         ctx.fillRect(0.9 * canvas.width, 0, 0.1 * canvas.width, canvas.height); // Right side wall
-//         break;
-        
-//       case "barrier-sim": // Potential barrier
-//         ctx.fillRect(0.4 * canvas.width, 0, 0.2 * canvas.width, canvas.height / 2);
-//         break;
-//     }
-//   }
-  
-
-// function drawWaveFunction(ctx, canvas, waveFunction, showProbability) {
-//     const centerY = canvas.height / 2;
-//     const scale = 80; // Scaling factor for the wave function
-    
-//     // Draw real part
-//     ctx.strokeStyle = "#3498db";
-//     ctx.lineWidth = 2;
-//     ctx.beginPath();
-    
-//     for (let x = 0; x < canvas.width; x++) {
-//       ctx.lineTo(x, centerY - waveFunction[x] * scale);
-//     }
-    
-//     ctx.stroke();
-    
-//     // Draw probability density if selected
-//     if (showProbability) {
-//       ctx.strokeStyle = "#e74c3c";
-//       ctx.fillStyle = "rgba(231, 76, 60, 0.2)";
-//       ctx.beginPath();
-//       ctx.moveTo(0, centerY);
-      
-//       const probabilityScale = 50; // Scaling factor for probability density
-//       for (let x = 0; x < canvas.width; x++) {
-//         const probability = waveFunction[x] * waveFunction[x] * scale / 2;
-//         // Apply scaling to probability and ensure it stays within canvas height
-//         ctx.lineTo(x, centerY + probability * probabilityScale);
-//       }
-      
-//       ctx.lineTo(canvas.width, centerY);
-//       ctx.closePath();
-//       ctx.fill();
-//       ctx.stroke();
-//     }
-//   }
-  
 
 function resetWaveFunctionSim() {
   waveFunctionRunning = false;

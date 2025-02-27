@@ -946,6 +946,7 @@
                 if (quantumAnimationId) {
                     cancelAnimationFrame(quantumAnimationId);
                     quantumAnimationId = null;
+                    quantumTime = 0; // Reset time when stopped
                 } else {
                     animateQuantum();
                 }
