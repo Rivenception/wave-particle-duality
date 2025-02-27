@@ -286,7 +286,7 @@ function drawDoubleSlitSetup() {
   ctx.fillRect(barrierX, slit2Center + slitWidth / 2, 5, canvas.height - (slit2Center + slitWidth / 2));
   
   // Draw detection screen
-  ctx.fillStyle = "#333";
+  ctx.fillStyle = "#d3d3d3";
   ctx.fillRect(canvas.width - 20, 0, 20, canvas.height);
 }
 
