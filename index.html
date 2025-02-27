@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave-Particle Duality: From Classical to Quantum Physics</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Wave-Particle Duality</h1>
+        <p>A Journey from Classical to Quantum Physics</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#classical">Classical Waves</a></li>
+            <li><a href="#relativistic">Relativistic Physics</a></li>
+            <li><a href="#quantum">Quantum Mechanics</a></li>
+            <li><a href="#experiments">Key Experiments</a></li>
+            <li><a href="#history">Historical Timeline</a></li>
+            <li><a href="#simulations">Interactive Simulations</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="introduction">
+            <h2>Introduction to Wave-Particle Duality</h2>
+            <p>The concept of wave-particle duality lies at the heart of quantum mechanics and represents one of the most profound shifts in our understanding of the physical world. This principle states that every particle or quantum entity may be described as either a particle or a wave, depending on the circumstances of the experiment.</p>
+            
+            <p>This website explores how our understanding of waves and particles evolved from classical physics through relativity theory and into the quantum realm. Through interactive simulations, historical context, and mathematical formulations, we'll explore one of the most fascinating concepts in modern physics.</p>
+            
+            <div class="equation">
+                <p>The de Broglie wavelength of a particle:</p>
+                <p>λ = h/p</p>
+                <p>where λ is the wavelength, h is Planck's constant, and p is the momentum of the particle.</p>
+            </div>
+        </section>
+        
+        <section id="classical">
+            <h2>Classical Wave Mechanics</h2>
+            
+            <p>In classical physics, waves and particles were considered distinct phenomena. Particles were discrete objects with definite positions and momenta, while waves were disturbances that propagated through a medium or space.</p>
+            
+            <h3>Properties of Classical Waves</h3>
+            <p>Classical waves demonstrate characteristics such as:</p>
+            <ul>
+                <li>Interference: Waves can superimpose, leading to constructive or destructive interference</li>
+                <li>Diffraction: Waves bend around obstacles or through openings</li>
+                <li>Refraction: Waves change direction when passing between different media</li>
+                <li>Reflection: Waves bounce off surfaces</li>
+            </ul>
+            
+            <div class="simulation-container">
+                <h3>Classical Wave Simulation</h3>
+                <p>This interactive simulation demonstrates interference patterns of classical waves. Adjust the frequency and amplitude to see how the patterns change.</p>
+                
+                <canvas id="classicalWaveCanvas" width="600" height="300"></canvas>
+                
+                <div class="simulation-controls">
+                    <button onclick="toggleClassicalWaveAnimation()">Start/Stop</button>
+                    <label for="frequency">Frequency:</label>
+                    <input type="range" id="frequency" min="1" max="10" value="3" oninput="updateClassicalWave()">
+                    
+                    <label for="amplitude">Amplitude:</label>
+                    <input type="range" id="amplitude" min="10" max="100" value="50" oninput="updateClassicalWave()">
+                </div>
+            </div>
+            
+            <h3>Classical Wave Equations</h3>
+            <div class="equation">
+                <p>The general wave equation:</p>
+                <p>∂²u/∂t² = v² ∇²u</p>
+                <p>where u is the displacement, t is time, v is the wave speed, and ∇² is the Laplacian operator.</p>
+            </div>
+        </section>
+        
+        <section id="relativistic">
+            <h2>Relativistic Wave Mechanics</h2>
+            
+            <p>Einstein's theory of relativity dramatically changed our understanding of the physical world, including the behavior of particles at high speeds. In the relativistic framework, the relationship between energy and momentum is fundamental to understanding wave-particle behavior.</p>
+            
+            <h3>Einstein's Mass-Energy Equivalence</h3>
+            <p>Perhaps the most famous equation in physics, E = mc², established that mass and energy are equivalent and interconvertible forms of the same entity.</p>
+            
+            <div class="equation">
+                <p>E = mc²</p>
+                <p>where E is energy, m is mass, and c is the speed of light in vacuum.</p>
+            </div>
+            
+            <p>For a particle with momentum p and rest mass m₀, the total energy is given by:</p>
+            
+            <div class="equation">
+                <p>E = √[(pc)² + (m₀c²)²]</p>
+                <p>This equation shows the relationship between a particle's energy, momentum, and rest mass in relativistic physics.</p>
+            </div>
+            
+            <h3>Lorentz Transformations</h3>
+            <p>The Lorentz transformations describe how measurements of space and time differ for observers in relative motion. These transformations maintain the invariance of the speed of light and lead to effects such as time dilation and length contraction.</p>
+            
+            <div class="simulation-container">
+                <h3>Relativistic Particle Simulation</h3>
+                <p>This simulation demonstrates the relativistic effects on a particle as it approaches the speed of light.</p>
+                
+                <canvas id="relativisticCanvas" width="600" height="300"></canvas>
+                
+                <div class="simulation-controls">
+                    <button onclick="toggleRelativisticAnimation()">Start/Stop</button>
+                    <label for="velocity">Velocity (% of c):</label>
+                    <input type="range" id="velocity" min="0" max="99" value="50" oninput="updateRelativisticSimulation()">
+                </div>
+            </div>
+        </section>
+        
+        <section id="quantum">
+            <h2>Quantum Wave Mechanics</h2>
+            
+            <p>Quantum mechanics revolutionized physics by introducing the concept that particles can behave as waves and vice versa. This duality is not simply a matter of perspective but a fundamental aspect of nature at the quantum level.</p>
+            
+            <h3>Wave Functions and Probability</h3>
+            <p>In quantum mechanics, particles are described by wave functions (ψ) whose square gives the probability density of finding the particle at a given position. This probabilistic interpretation stands in stark contrast to the deterministic nature of classical mechanics.</p>
+            
+            <div class="equation">
+                <p>The probability of finding a particle in a small volume dV around point r is:</p>
+                <p>P(r) = |ψ(r)|² dV</p>
+                <p>where |ψ(r)|² is the squared magnitude of the wave function at point r.</p>
+            </div>
+            
+            <h3>Schrödinger's Equation</h3>
+            <p>The Schrödinger equation is the quantum mechanical equivalent of Newton's laws in classical mechanics. It describes how the quantum state of a physical system changes over time.</p>
+            
+            <div class="equation">
+                <p>Time-dependent Schrödinger equation:</p>
+                <p>iℏ ∂ψ/∂t = Ĥψ</p>
+                <p>where i is the imaginary unit, ℏ is the reduced Planck constant, ψ is the wave function, and Ĥ is the Hamiltonian operator.</p>
+            </div>
+            
+            <div class="equation">
+                <p>Time-independent Schrödinger equation:</p>
+                <p>Ĥψ = Eψ</p>
+                <p>where E is the energy eigenvalue.</p>
+            </div>
+            
+            <h3>Heisenberg's Uncertainty Principle</h3>
+            <p>The uncertainty principle, formulated by Werner Heisenberg in 1927, states that there is a fundamental limit to the precision with which complementary variables, such as position and momentum, can be known simultaneously.</p>
+            
+            <div class="equation">
+                <p>ΔxΔp ≥ ℏ/2</p>
+                <p>where Δx is the uncertainty in position, Δp is the uncertainty in momentum, and ℏ is the reduced Planck constant.</p>
+            </div>
+            
+            <div class="simulation-container">
+                <h3>Quantum Wave Function Simulation</h3>
+                <p>This simulation demonstrates the evolution of a quantum wave packet. Observe how the probability distribution changes over time.</p>
+                
+                <canvas id="quantumCanvas" width="600" height="300"></canvas>
+                
+                <div class="simulation-controls">
+                    <button onclick="toggleQuantumAnimation()">Start/Stop</button>
+                    <label for="potentialType">Potential:</label>
+                    <select id="potentialType" onchange="updateQuantumSimulation()">
+                        <option value="free">Free Particle</option>
+                        <option value="well">Potential Well</option>
+                        <option value="barrier">Potential Barrier</option>
+                    </select>
+                    
+                    <label for="initialWidth">Initial Width:</label>
+                    <input type="range" id="initialWidth" min="10" max="100" value="30" oninput="updateQuantumSimulation()">
+                </div>
+            </div>
+        </section>
+        
+        <section id="experiments">
+            <h2>Groundbreaking Experiments</h2>
+            <p>Several key experiments have shaped our understanding of wave-particle duality. These experiments have not only confirmed theoretical predictions but have also led to new insights and questions about the nature of reality at the quantum level.</p>
+            
+            <div class="experiment-card">
+                <div class="card-header">
+                    <h3>Young's Double-Slit Experiment (1801)</h3>
+                </div>
+                <div class="card-body">
+                    <p>Thomas Young's double-slit experiment provided the first clear demonstration of the wave nature of light. In this experiment, light passing through two closely spaced slits created an interference pattern on a screen behind the slits, which could only be explained if light behaved as a wave.</p>
+                    
+                    <p>When the experiment was later conducted with individual electrons, photons, and even large molecules, similar interference patterns were observed, suggesting that particles also exhibit wave-like behavior.</p>
+                    
+                    <canvas id="doubleslitCanvas" width="500" height="250"></canvas>
+                    <div class="simulation-controls">
+                        <button onclick="toggleDoubleslitAnimation()">Start/Stop</button>
+                        <label for="particleType">Particle:</label>
+                        <select id="particleType" onchange="updateDoubleslitSimulation()">
+                            <option value="light">Light</option>
+                            <option value="electron">Electron</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Why it was groundbreaking: This experiment challenged the purely particle-based understanding of light and laid the foundation for wave-particle duality. When later performed with electrons and other particles, it demonstrated that all matter exhibits both wave and particle properties.</p>
+                </div>
+            </div>
+            
+            <div class="experiment-card">
+                <div class="card-header">
+                    <h3>Photoelectric Effect (1905)</h3>
+                </div>
+                <div class="card-body">
+                    <p>The photoelectric effect refers to the emission of electrons from a material when light shines on it. Classical wave theory predicted that increasing the intensity of light would increase the energy of the emitted electrons. However, experiments showed that the energy of the electrons depended on the frequency (color) of the light, not its intensity.</p>
+                    
+                    <p>Einstein explained this by proposing that light consists of discrete packets of energy called photons. This work earned him the Nobel Prize in Physics in 1921 and provided strong evidence for the particle nature of light.</p>
+                    
+                    <canvas id="photoelectricCanvas" width="500" height="250"></canvas>
+                    <div class="simulation-controls">
+                        <button onclick="togglePhotoelectricAnimation()">Start/Stop</button>
+                        <label for="lightFrequency">Light Frequency:</label>
+                        <input type="range" id="lightFrequency" min="1" max="10" value="5" oninput="updatePhotoelectricSimulation()">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Why it was groundbreaking: Einstein's explanation of the photoelectric effect introduced the concept of light quanta (photons), confirming the particle aspect of light and leading to the development of quantum mechanics.</p>
+                </div>
+            </div>
+            
+            <div class="experiment-card">
+                <div class="card-header">
+                    <h3>Compton Scattering (1923)</h3>
+                </div>
+                <div class="card-body">
+                    <p>Arthur Compton discovered that when X-rays scatter off electrons, the scattered X-rays have a longer wavelength than the incident X-rays. This phenomenon, known as the Compton effect, could only be explained by treating the X-ray photons as particles that collide with electrons, transferring some of their energy and momentum.</p>
+                    
+                    <canvas id="comptonCanvas" width="500" height="250"></canvas>
+                    <div class="simulation-controls">
+                        <button onclick="toggleComptonAnimation()">Start/Stop</button>
+                        <label for="scatteringAngle">Scattering Angle:</label>
+                        <input type="range" id="scatteringAngle" min="0" max="180" value="90" oninput="updateComptonSimulation()">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Why it was groundbreaking: Compton's experiment provided further evidence for the particle nature of light, showing that photons carry momentum and energy, just like classical particles.</p>
+                </div>
+            </div>
+            
+            <div class="experiment-card">
+                <div class="card-header">
+                    <h3>Davisson-Germer Experiment (1927)</h3>
+                </div>
+                <div class="card-body">
+                    <p>Clinton Davisson and Lester Germer observed that electrons reflected from a crystalline nickel target showed diffraction patterns similar to those produced by X-rays. This experiment provided direct evidence for Louis de Broglie's hypothesis that particles can exhibit wave-like properties.</p>
+                    
+                    <canvas id="dgCanvas" width="500" height="250"></canvas>
+                    <div class="simulation-controls">
+                        <button onclick="toggleDGAnimation()">Start/Stop</button>
+                        <label for="electronEnergy">Electron Energy:</label>
+                        <input type="range" id="electronEnergy" min="1" max="10" value="5" oninput="updateDGSimulation()">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Why it was groundbreaking: This experiment confirmed de Broglie's hypothesis that matter (not just light) has wave-like properties, providing crucial experimental evidence for the wave-particle duality of matter.</p>
+                </div>
+            </div>
+            
+            <div class="experiment-card">
+                <div class="card-header">
+                    <h3>Stern-Gerlach Experiment (1922)</h3>
+                </div>
+                <div class="card-body">
+                    <p>Otto Stern and Walther Gerlach discovered that a beam of silver atoms passing through a non-uniform magnetic field would split into two distinct beams. This demonstrated the quantization of angular momentum (spin) in atoms, a property that could not be explained by classical physics.</p>
+                    
+                    <canvas id="sgCanvas" width="500" height="250"></canvas>
+                    <div class="simulation-controls">
+                        <button onclick="toggleSGAnimation()">Start/Stop</button>
+                        <label for="magneticField">Magnetic Field Strength:</label>
+                        <input type="range" id="magneticField" min="1" max="10" value="5" oninput="updateSGSimulation()">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>Why it was groundbreaking: The experiment revealed the quantum nature of angular momentum and provided evidence for quantum superposition, a key concept in quantum mechanics.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="history">
+            <h2>Historical Timeline</h2>
+            <p>The development of wave-particle duality theory spans over two centuries and involves contributions from numerous physicists and mathematicians. Below is a timeline of key events in this scientific journey.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1690</h3>
+                        <p>Christiaan Huygens proposes the wave theory of light, suggesting that light propagates as waves through an "ether."</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1704</h3>
+                        <p>Isaac Newton publishes "Opticks," advocating the corpuscular (particle) theory of light, which remained dominant for nearly a century.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1801</h3>
+                        <p>Thomas Young performs his famous double-slit experiment, demonstrating the interference of light and providing strong evidence for the wave theory.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1865</h3>
+                        <p>James Clerk Maxwell formulates the classical theory of electromagnetic radiation, unifying electricity, magnetism, and light as manifestations of the same phenomenon.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1887</h3>
+                        <p>Heinrich Hertz discovers the photoelectric effect, which would later be explained by Einstein using the particle theory of light.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1900</h3>
+                        <p>Max Planck introduces the quantum concept, suggesting that energy is transferred in discrete units (quanta) rather than continuously, to explain black-body radiation.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1905</h3>
+                        <p>Albert Einstein explains the photoelectric effect by proposing that light consists of discrete quanta (later called photons), demonstrating the particle nature of light.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1913</h3>
+                        <p>Niels Bohr proposes his model of the atom, incorporating quantum ideas to explain the stability of atoms and their emission/absorption spectra.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1923</h3>
+                        <p>Louis de Broglie proposes that all matter has wave-like properties, with a wavelength inversely proportional to momentum (λ = h/p).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1924</h3>
+                        <p>Arthur Compton observes that X-rays scatter from electrons as if they were particles, providing further evidence for the particle nature of electromagnetic radiation.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1925</h3>
+                        <p>Werner Heisenberg, Max Born, and Pascual Jordan develop matrix mechanics, the first complete mathematical formulation of quantum mechanics.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1926</h3>
+                        <p>Erwin Schrödinger formulates wave mechanics and derives his famous equation describing how quantum states evolve over time.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1927</h3>
+                        <p>Clinton Davisson and Lester Germer experimentally confirm de Broglie's hypothesis by observing electron diffraction, demonstrating the wave nature of electrons.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1927</h3>
+                        <p>Werner Heisenberg formulates the uncertainty principle, stating that certain pairs of physical properties cannot be simultaneously measured with arbitrary precision.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1928</h3>
+                        <p>Max Born interprets the wave function as giving the probability of finding a particle at a specific position, completing the probabilistic interpretation of quantum mechanics.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1935</h3>
+                        <p>Einstein, Podolsky, and Rosen publish the EPR paradox paper, challenging the completeness of quantum mechanics and highlighting the issue of quantum entanglement.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1964</h3>
+                        <p>John Bell develops Bell's inequality, providing a way to test whether quantum mechanics is compatible with local hidden variable theories.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1982</h3>
+                        <p>Alain Aspect performs experiments testing Bell's inequality, confirming quantum mechanical predictions and ruling out local hidden variable theories.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">1999</h3>
+                        <p>Researchers at the University of Vienna demonstrate quantum interference with buckminsterfullerene (C₆₀) molecules, showing wave-like behavior for large particles.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">2012</h3>
+                        <p>Researchers use a photon detector to observe the build-up of interference patterns one photon at a time, visualizing the particle and wave nature simultaneously.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">2019</h3>
+                        <p>Scientists at NIST create quantum entanglement between two macroscopic objects, demonstrating quantum effects at larger scales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="simulations">
+            <h2>Interactive Simulations</h2>
+            <p>Explore wave-particle duality through interactive simulations. Adjust parameters to see how waves and particles behave under different conditions.</p>
+            
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" onclick="openTab(event, 'waveSim')">Wave Properties</div>
+                    <div class="tab" onclick="openTab(event, 'doubleSlit')">Double-Slit Experiment</div>
+                    <div class="tab" onclick="openTab(event, 'uncertainty')">Uncertainty Principle</div>
+                    <div class="tab" onclick="openTab(event, 'waveFunctions')">Wave Functions</div>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="waveSim" class="tab-pane active">
+                        <h3>Wave Properties Simulation</h3>
+                        <p>This simulation demonstrates the fundamental properties of waves including interference, diffraction, and superposition. Adjust the parameters to see how waves interact.</p>
+                        
+                        <canvas id="waveSimCanvas" width="700" height="400"></canvas>
+                        
+                        <div class="simulation-controls">
+                            <!-- <button onclick="toggleWaveSim()">Start/Stop</button> -->
+                            <button onclick="resetWaveSim()">Reset</button>
+                            
+                            <label for="waveType">Wave Type:</label>
+                            <select id="waveType" onchange="updateWaveSim()">
+                                <option value="sine">Sine Wave</option>
+                                <option value="square">Square Wave</option>
+                                <option value="sawtooth">Sawtooth Wave</option>
+                            </select>
+                            
+                            <label for="waveFreq">Frequency:</label>
+                            <input type="range" id="waveFreq" min="1" max="20" value="5" oninput="updateWaveSim()">
+                            
+                            <label for="waveAmplitude">Amplitude:</label>
+                            <input type="range" id="waveAmplitude" min="1" max="100" value="50" oninput="updateWaveSim()">
+                        </div>
+                    </div>
+                    
+                    <div id="doubleSlit" class="tab-pane">
+                        <h3>Double-Slit Experiment Simulation</h3>
+                        <p>Experience the classic experiment that demonstrates wave-particle duality. Watch as particles build up an interference pattern over time, even when sent one at a time.</p>
+                        
+                        <canvas id="doubleSlitSimCanvas" width="700" height="400"></canvas>
+                        
+                        <div class="simulation-controls">
+                            <button onclick="toggleDoubleSlitSim()">Start/Stop</button>
+                            <button onclick="resetDoubleSlitSim()">Reset</button>
+                            
+                            <label for="particleRate">Particle Rate:</label>
+                            <input type="range" id="particleRate" min="1" max="100" value="20" oninput="updateDoubleSlitSim()">
+                            
+                            <label for="particleType">Particle Type:</label>
+                            <select id="particleType" onchange="updateDoubleSlitSim()">
+                                <option value="photon">Photon</option>
+                                <option value="electron">Electron</option>
+                                <option value="neutron">Neutron</option>
+                            </select>
+                            
+                            <label for="slitWidth">Slit Width:</label>
+                            <input type="range" id="slitWidth" min="1" max="20" value="5" oninput="updateDoubleSlitSim()">
+                            
+                            <label for="slitSeparation">Slit Separation:</label>
+                            <input type="range" id="slitSeparation" min="10" max="100" value="50" oninput="updateDoubleSlitSim()">
+                        </div>
+                    </div>
+                    
+                    <div id="uncertainty" class="tab-pane">
+                        <h3>Heisenberg's Uncertainty Principle Simulation</h3>
+                        <p>Explore how measuring one property of a quantum system affects our ability to measure complementary properties with precision.</p>
+                        
+                        <canvas id="uncertaintyCanvas" width="700" height="400"></canvas>
+                        
+                        <div class="simulation-controls">
+                            <!-- <button onclick="toggleUncertaintySim()">Start/Stop</button> -->
+                            <button onclick="resetUncertaintySim()">Reset</button>
+                            
+                            <label for="measurePrecision">Measurement Precision:</label>
+                            <input type="range" id="measurePrecision" min="1" max="100" value="50" oninput="updateUncertaintySim()">
+                            
+                            <div>
+                                <input type="radio" id="positionMeasure" name="measureType" value="position" checked onchange="updateUncertaintySim()">
+                                <label for="positionMeasure">Measure Position</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="momentumMeasure" name="measureType" value="momentum" onchange="updateUncertaintySim()">
+                                <label for="momentumMeasure">Measure Momentum</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="waveFunctions" class="tab-pane">
+                        <h3>Quantum Wave Functions Simulation</h3>
+                        <p>Visualize quantum wave functions for different potentials and see how they evolve over time.</p>
+                        
+                        <canvas id="waveFunctionCanvas" width="700" height="400"></canvas>
+                        
+                        <div class="simulation-controls">
+                            <button onclick="toggleWaveFunctionSim()">Start/Stop</button>
+                            <button onclick="resetWaveFunctionSim()">Reset</button>
+                            
+                            <label for="potentialTypeSim">Potential:</label>
+                            <select id="potentialTypeSim" onchange="updateWaveFunctionSim()">
+                                <option value="none-sim">Free Particle</option>
+                                <option value="harmonic-sim">Harmonic Oscillator</option>
+                                <option value="well-sim">Infinite Square Well</option>
+                                <option value="barrier-sim">Potential Barrier</option>
+                            </select>
+                            
+                            <label for="energyLevel">Energy Level:</label>
+                            <input type="range" id="energyLevel" min="1" max="10" value="1" oninput="updateWaveFunctionSim()">
+                            
+                            <div>
+                                <input type="checkbox" id="showProbability" checked onchange="updateWaveFunctionSim()">
+                                <label for="showProbability">Show Probability Density</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="references">
+            <h2>References and Further Reading</h2>
+            
+            <h3>Books</h3>
+            <div class="reference">
+                <p>Feynman, R. P. (1965). <em>The Feynman Lectures on Physics, Vol. III: Quantum Mechanics</em>. Addison-Wesley.</p>
+            </div>
+            <div class="reference">
+                <p>Griffiths, D. J. (2017). <em>Introduction to Quantum Mechanics</em>. Cambridge University Press.</p>
+            </div>
+            <div class="reference">
+                <p>Born, M. (1926). <em>Quantenmechanik der Stoßvorgänge</em>. Zeitschrift für Physik, 38(11-12), 803-827.</p>
+            </div>
+            
+            <h3>Journal Articles</h3>
+            <div class="reference">
+                <p>de Broglie, L. (1923). <em>Waves and Quanta</em>. Nature, 112, 540.</p>
+            </div>
+            <div class="reference">
+                <p>Davisson, C., & Germer, L. H. (1927). <em>Diffraction of Electrons by a Crystal of Nickel</em>. Physical Review, 30(6), 705.</p>
+            </div>
+            <div class="reference">
+                <p>Einstein, A., Podolsky, B., & Rosen, N. (1935). <em>Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?</em> Physical Review, 47(10), 777-780.</p>
+            </div>
+            
+            <h3>Online Resources</h3>
+            <div class="reference">
+                <p>PhET Interactive Simulations. <em>Quantum Phenomena</em>. University of Colorado Boulder.</p>
+            </div>
+            <div class="reference">
+                <p>Quantum Wave Interference. <em>SPIE Micro-Course on the Web.</em></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Wave-Particle Duality Educational Website</p>
+        <p>Created for educational purposes to help students understand the fundamental concepts of quantum mechanics and wave-particle duality.</p>
+    </footer>
+
+    <script>
+        // General utility functions
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            const tabContent = document.getElementsByClassName("tab-pane");
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            // Show the specific tab content
+            document.getElementById(tabName).classList.add("active");
+            
+            // Add active class to the button that opened the tab
+            evt.currentTarget.classList.add("active");
+        }
+        
+        // Classical Wave Simulation
+        let classicalWaveAnimationId = null;
+        let classicalWaveTime = 0;
+        
+        function initClassicalWave() {
+            const canvas = document.getElementById('classicalWaveCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Initial setup
+            updateClassicalWave();
+        }
+        
+        function updateClassicalWave() {
+            const canvas = document.getElementById('classicalWaveCanvas');
+            const ctx = canvas.getContext('2d');
+            const frequency = document.getElementById('frequency').value;
+            const amplitude = document.getElementById('amplitude').value;
+            
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw the wave
+            drawClassicalWave(ctx, canvas.width, canvas.height, parseFloat(frequency), parseFloat(amplitude), classicalWaveTime);
+            
+            // Draw the axes
+            drawAxes(ctx, canvas.width, canvas.height);
+        }
+        
+        function drawClassicalWave(ctx, width, height, frequency, amplitude, time) {
+            ctx.beginPath();
+            ctx.strokeStyle = '#3498db';
+            ctx.lineWidth = 2;
+            
+            for (let x = 0; x < width; x++) {
+                // Calculate y value for the wave
+                const normalizedX = x / width;
+                const angle = (normalizedX * Math.PI * 2 * frequency) + time;
+                const y = height / 2 + Math.sin(angle) * amplitude;
+                
+                if (x === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+            
+            ctx.stroke();
+        }
+        
+        function drawAxes(ctx, width, height) {
+            // X-axis
+            ctx.beginPath();
+            ctx.strokeStyle = '#aaa';
+            ctx.lineWidth = 1;
+            ctx.moveTo(0, height / 2);
+            ctx.lineTo(width, height / 2);
+            ctx.stroke();
+            
+            // Y-axis
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(0, height);
+            ctx.stroke();
+        }
+        
+        function toggleClassicalWaveAnimation() {
+            if (classicalWaveAnimationId) {
+                cancelAnimationFrame(classicalWaveAnimationId);
+                classicalWaveAnimationId = null;
+            } else {
+                animateClassicalWave();
+            }
+        }
+        
+        function animateClassicalWave() {
+            classicalWaveTime += 0.05;
+            updateClassicalWave();
+            classicalWaveAnimationId = requestAnimationFrame(animateClassicalWave);
+        }
+        
+        // Relativistic Simulation
+        let relativisticAnimationId = null;
+        let relativisticTime = 0;
+        
+        function initRelativisticSimulation() {
+            const canvas = document.getElementById('relativisticCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Initial setup
+            updateRelativisticSimulation();
+        }
+        
+        function updateRelativisticSimulation() {
+            const canvas = document.getElementById('relativisticCanvas');
+            const ctx = canvas.getContext('2d');
+            const velocity = document.getElementById('velocity').value;
+            
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw the relativistic effects
+            drawRelativisticEffects(ctx, canvas.width, canvas.height, parseFloat(velocity), relativisticTime);
+            
+            // Draw the axes and labels
+            drawRelativisticAxes(ctx, canvas.width, canvas.height);
+        }
+        
+        function drawRelativisticEffects(ctx, width, height, velocity, time) {
+            const normalizedVelocity = velocity / 100; // Scale to 0-1
+            const gamma = 1 / Math.sqrt(1 - normalizedVelocity * normalizedVelocity);
+            
+            // Draw reference object (rest frame)
+            ctx.fillStyle = '#95a5a6';
+            ctx.fillRect(100, height / 2 - 30, 50, 60);
+            
+            // Draw moving object with relativistic effects
+            const x = 200 + (time * normalizedVelocity * 50) % (width - 300);
+            
+            // Length contraction
+            const contractedWidth = 50 / gamma;
+            
+            ctx.fillStyle = '#e74c3c';
+            ctx.fillRect(x, height / 2 - 30, contractedWidth, 60);
+            
+            // Display gamma factor
+            ctx.fillStyle = '#2c3e50';
+            ctx.font = '14px Arial';
+            ctx.fillText(`Lorentz factor (γ): ${gamma.toFixed(2)}`, 20, 30);
+            ctx.fillText(`Length contraction: L = L₀/γ = ${(50/gamma).toFixed(2)} units`, 20, 50);
+            ctx.fillText(`Time dilation: Δt = γΔt₀ = ${gamma.toFixed(2)} × Δt₀`, 20, 70);
+        }
+        
+        function drawRelativisticAxes(ctx, width, height) {
+            // Reference line
+            ctx.beginPath();
+            ctx.strokeStyle = '#aaa';
+            ctx.lineWidth = 1;
+            ctx.moveTo(0, height / 2 + 40);
+            ctx.lineTo(width, height / 2 + 40);
+            ctx.stroke();
+        }
+        
+        function toggleRelativisticAnimation() {
+            if (relativisticAnimationId) {
+                cancelAnimationFrame(relativisticAnimationId);
+                relativisticAnimationId = null;
+            } else {
+                animateRelativistic();
+            }
+        }
+        
+        function animateRelativistic() {
+            relativisticTime += 0.1;
+            updateRelativisticSimulation();
+            relativisticAnimationId = requestAnimationFrame(animateRelativistic);
+        }
+        
+        // Quantum Wave Function Simulation
+        let quantumAnimationId = null;
+        let quantumTime = 0;
+        
+        function initQuantumSimulation() {
+            const canvas = document.getElementById('quantumCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Initial setup
+            updateQuantumSimulation();
+        }
+        
+        function updateQuantumSimulation() {
+            const canvas = document.getElementById('quantumCanvas');
+            const ctx = canvas.getContext('2d');
+            const potentialType = document.getElementById('potentialType').value;
+            const initialWidth = document.getElementById('initialWidth').value;
+            
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw the potential
+            drawPotential(ctx, canvas.width, canvas.height, potentialType);
+            
+            // Draw the wave function
+            drawQuantumWaveFunction(ctx, canvas.width, canvas.height, potentialType, initialWidth, quantumTime);
+            
+            // Draw the axes
+            drawQuantumAxes(ctx, canvas.width, canvas.height);
+        }
+        
+        function drawPotential(ctx, width, height, potentialType) {
+            ctx.fillStyle = 'rgba(231, 76, 60, 0.2)';
+            
+            switch(potentialType) {
+                case 'well':
+                    // Potential well
+                    ctx.fillRect(0, 0, width * 0.2, height);
+                    ctx.fillRect(width * 0.8, 0, width * 0.2, height);
+                    break;
+                case 'barrier':
+                    // Potential barrier
+                    ctx.fillRect(width * 0.45, 0, width * 0.1, height);
+                    break;
+                case 'free':
+                default:
+                    // Free particle (no potential)
+                    break;
+            }
+        }
+
+        function drawQuantumWaveFunction(ctx, width, height, potentialType, initialWidth, time) {
+                const centerX = width / 2;
+                const centerY = height / 2;
+                const waveWidth = parseFloat(initialWidth);
+                
+                ctx.beginPath();
+                ctx.strokeStyle = '#3498db';
+                ctx.lineWidth = 2;
+                
+                // Draw real part of wave function (blue)
+                for (let x = 0; x < width; x++) {
+                    const normalizedX = (x - centerX) / waveWidth;
+                    let amplitude;
+                    
+                    switch(potentialType) {
+                        case 'well':
+                            // Wave function in a potential well (standing wave)
+                            if (x > width * 0.2 && x < width * 0.8) {
+                                amplitude = Math.sin(normalizedX * 0.5 + time) * Math.exp(-normalizedX * normalizedX * 0.01);
+                            } else {
+                                amplitude = 0;
+                            }
+                            break;
+                        case 'barrier':
+                            // Wave function with tunneling through a barrier
+                            if (x < width * 0.45) {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01);
+                            } else if (x > width * 0.55) {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01) * 0.3;
+                            } else {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01) * 0.1;
+                            }
+                            break;
+                        case 'free':
+                        default:
+                            // Free particle (Gaussian wave packet)
+                            const k = 0.3; // Wave number
+                            amplitude = Math.cos(normalizedX * k + time) * Math.exp(-(normalizedX - time * 5) * (normalizedX - time * 5) * 0.01);
+                            break;
+                    }
+                    
+                    // Scale and position the wave
+                    const y = centerY - amplitude * 50;
+                    
+                    if (x === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                }
+                
+                ctx.stroke();
+                
+                // Draw probability density (shaded area)
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(52, 152, 219, 0.2)';
+                
+                for (let x = 0; x < width; x++) {
+                    const normalizedX = (x - centerX) / waveWidth;
+                    let amplitude;
+                    
+                    switch(potentialType) {
+                        case 'well':
+                            if (x > width * 0.2 && x < width * 0.8) {
+                                amplitude = Math.sin(normalizedX * 0.5 + time) * Math.exp(-normalizedX * normalizedX * 0.01);
+                            } else {
+                                amplitude = 0;
+                            }
+                            break;
+                        case 'barrier':
+                            if (x < width * 0.45) {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01);
+                            } else if (x > width * 0.55) {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01) * 0.3;
+                            } else {
+                                amplitude = Math.cos(normalizedX * 0.3 + time) * Math.exp(-normalizedX * normalizedX * 0.01) * 0.1;
+                            }
+                            break;
+                        case 'free':
+                        default:
+                            const k = 0.3;
+                            amplitude = Math.cos(normalizedX * k + time) * Math.exp(-(normalizedX - time * 5) * (normalizedX - time * 5) * 0.01);
+                            break;
+                    }
+                    
+                    // Probability is proportional to square of amplitude
+                    const probability = amplitude * amplitude;
+                    const y = centerY - probability * 100;
+                    
+                    if (x === 0) {
+                        ctx.moveTo(x, centerY);
+                        ctx.lineTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                }
+                
+                ctx.lineTo(width, centerY);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            function drawQuantumAxes(ctx, width, height) {
+                // X-axis
+                ctx.beginPath();
+                ctx.strokeStyle = '#aaa';
+                ctx.lineWidth = 1;
+                ctx.moveTo(0, height / 2);
+                ctx.lineTo(width, height / 2);
+                ctx.stroke();
+                
+                // Labels
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '12px Arial';
+                ctx.fillText('Position (x)', width - 70, height / 2 + 20);
+                ctx.fillText('ψ(x)', 10, 20);
+            }
+
+            function toggleQuantumAnimation() {
+                if (quantumAnimationId) {
+                    cancelAnimationFrame(quantumAnimationId);
+                    quantumAnimationId = null;
+                } else {
+                    animateQuantum();
+                }
+            }
+
+            function animateQuantum() {
+                quantumTime += 0.05;
+                updateQuantumSimulation();
+                quantumAnimationId = requestAnimationFrame(animateQuantum);
+            }
+
+            // Double-slit Experiment Simulation
+            let doubleslitAnimationId = null;
+            let doubleslitTime = 0;
+            let particles = [];
+
+            function initDoubleslitSimulation() {
+                const canvas = document.getElementById('doubleslitCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Initial setup
+                updateDoubleslitSimulation();
+            }
+
+            function updateDoubleslitSimulation() {
+                const canvas = document.getElementById('doubleslitCanvas');
+                const ctx = canvas.getContext('2d');
+                const particleType = document.getElementById('particleType').value;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw the apparatus
+                drawDoubleslitApparatus(ctx, canvas.width, canvas.height);
+                
+                // Draw the particles
+                drawParticles(ctx, canvas.width, canvas.height, particleType);
+                
+                // Draw interference pattern
+                drawInterferencePattern(ctx, canvas.width, canvas.height, doubleslitTime);
+            }
+
+            function drawDoubleslitApparatus(ctx, width, height) {
+                // Draw source
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(50, height / 2 - 10, 10, 20);
+                
+                // Draw barrier with slits
+                ctx.fillStyle = '#2c3e50';
+                ctx.fillRect(width / 3, 0, 10, height / 2 - 30);
+                ctx.fillRect(width / 3, height / 2 - 10, 10, 20);
+                ctx.fillRect(width / 3, height / 2 + 30, 10, height / 2 - 30);
+                
+                // Draw detector screen
+                ctx.fillStyle = '#ecf0f1';
+                ctx.fillRect(width - 30, 0, 20, height);
+            }
+
+            function drawParticles(ctx, width, height, particleType) {
+                // Add new particle occasionally
+                if (Math.random() < 0.1) {
+                    particles.push({
+                        x: 60,
+                        y: height / 2,
+                        vx: 2 + Math.random(),
+                        vy: Math.random() * 2 - 1,
+                        type: particleType
+                    });
+                }
+                
+                // Update and draw particles
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    
+                    // Update position
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    
+                    // Apply quantum interference when passing through slits
+                    if (p.x >= width / 3 && p.x < width / 3 + 10) {
+                        // Check if passing through a slit
+                        if (p.y > height / 2 - 30 && p.y < height / 2 - 10 ||
+                            p.y > height / 2 + 10 && p.y < height / 2 + 30) {
+                            // Adjust trajectory based on wave interference
+                            p.vy += Math.sin(p.y * 0.1) * 0.05;
+                        } else {
+                            // Blocked by barrier
+                            particles.splice(i, 1);
+                            i--;
+                            continue;
+                        }
+                    }
+                    
+                    // Draw the particle
+                    ctx.beginPath();
+                    ctx.fillStyle = p.type === 'electron' ? '#3498db' : '#f39c12';
+                    ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Remove particles that hit the detector or go out of bounds
+                    if (p.x > width - 30) {
+                        particles.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+
+            function drawInterferencePattern(ctx, width, height, time) {
+                // Draw the build-up of an interference pattern on the detector screen
+                const patternIntensity = new Array(height).fill(0);
+                
+                // Calculate interference pattern intensity
+                for (let y = 0; y < height; y++) {
+                    const distToUpperSlit = Math.sqrt(Math.pow(width * 2/3, 2) + Math.pow(y - (height / 2 - 20), 2));
+                    const distToLowerSlit = Math.sqrt(Math.pow(width * 2/3, 2) + Math.pow(y - (height / 2 + 20), 2));
+                    
+                    // Phase difference determines interference (constructive or destructive)
+                    const phaseDiff = (distToUpperSlit - distToLowerSlit) * 0.5;
+                    patternIntensity[y] = Math.cos(phaseDiff) * Math.cos(phaseDiff);
+                }
+                
+                // Draw the pattern
+                for (let y = 0; y < height; y++) {
+                    const intensity = patternIntensity[y] * Math.min(1, time * 0.01);
+                    ctx.fillStyle = `rgba(52, 152, 219, ${intensity})`;
+                    ctx.fillRect(width - 25, y, 15, 1);
+                }
+            }
+
+            function toggleDoubleslitAnimation() {
+                if (doubleslitAnimationId) {
+                    cancelAnimationFrame(doubleslitAnimationId);
+                    doubleslitAnimationId = null;
+                } else {
+                    animateDoubleslit();
+                }
+            }
+
+            function animateDoubleslit() {
+                doubleslitTime += 0.2;
+                updateDoubleslitSimulation();
+                doubleslitAnimationId = requestAnimationFrame(animateDoubleslit);
+            }
+
+            // Photoelectric Effect Simulation
+            let photoelectricAnimationId = null;
+            let electrons = [];
+
+            function initPhotoelectricSimulation() {
+                const canvas = document.getElementById('photoelectricCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Initial setup
+                updatePhotoelectricSimulation();
+            }
+
+            function updatePhotoelectricSimulation() {
+                const canvas = document.getElementById('photoelectricCanvas');
+                const ctx = canvas.getContext('2d');
+                const frequency = document.getElementById('lightFrequency').value;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw apparatus
+                drawPhotoelectricApparatus(ctx, canvas.width, canvas.height);
+                
+                // Draw light beam
+                drawLightBeam(ctx, canvas.width, canvas.height, frequency);
+                
+                // Draw electrons
+                drawElectrons(ctx, canvas.width, canvas.height, frequency);
+            }
+
+            function drawPhotoelectricApparatus(ctx, width, height) {
+                // Draw metal plate
+                ctx.fillStyle = '#95a5a6';
+                ctx.fillRect(width / 2, height / 4, 10, height / 2);
+                
+                // Draw circuit
+                ctx.strokeStyle = '#2c3e50';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(width / 2 + 10, height / 2);
+                ctx.lineTo(width * 3/4, height / 2);
+                ctx.lineTo(width * 3/4, height * 3/4);
+                ctx.lineTo(width / 4, height * 3/4);
+                ctx.lineTo(width / 4, height / 2);
+                ctx.lineTo(width / 2, height / 2);
+                ctx.stroke();
+                
+                // Draw collector plate
+                ctx.fillStyle = '#7f8c8d';
+                ctx.fillRect(width * 3/4 - 10, height / 3, 10, height / 3);
+            }
+
+            function drawLightBeam(ctx, width, height, frequency) {
+                const normalizedFreq = frequency / 10; // Scale to 0-1
+                
+                // Calculate color based on frequency
+                const hue = 240 - normalizedFreq * 240; // 240 (blue) to 0 (red)
+                ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+                
+                // Draw light beam
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                
+                for (let i = 0; i < 5; i++) {
+                    const offset = i * 10;
+                    ctx.moveTo(0, height / 2 - 20 + offset);
+                    ctx.lineTo(width / 2, height / 2 - 10 + offset);
+                }
+                
+                ctx.stroke();
+                
+                // Draw photon particles
+                ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
+                for (let i = 0; i < 10; i++) {
+                    const x = (Math.sin(Date.now() * 0.001 + i) + 1) * width / 4;
+                    const y = height / 2 - 20 + (i * 5) % 40;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 3, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            function drawElectrons(ctx, width, height, frequency) {
+                const normalizedFreq = frequency / 10;
+                const threshold = 4; // Minimum frequency to emit electrons
+                
+                // Only emit electrons if frequency is above threshold
+                if (normalizedFreq > threshold / 10) {
+                    // Probability of emission increases with frequency
+                    if (Math.random() < (normalizedFreq - threshold / 10) * 0.2) {
+                        electrons.push({
+                            x: width / 2 + 5,
+                            y: height / 2 + (Math.random() - 0.5) * height / 3,
+                            vx: (normalizedFreq - threshold / 10) * 2, // Velocity depends on frequency
+                            age: 0
+                        });
+                    }
+                }
+                
+                // Update and draw electrons
+                ctx.fillStyle = '#3498db';
+                for (let i = 0; i < electrons.length; i++) {
+                    const e = electrons[i];
+                    
+                    // Update position
+                    e.x += e.vx;
+                    e.age++;
+                    
+                    // Draw electron
+                    ctx.beginPath();
+                    ctx.arc(e.x, e.y, 3, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Remove old electrons
+                    if (e.x > width || e.age > 100) {
+                        electrons.splice(i, 1);
+                        i--;
+                    }
+                }
+                
+                // Display information
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Light Frequency: ${frequency}`, 20, 30);
+                ctx.fillText(`Threshold Frequency: ${threshold}`, 20, 50);
+                if (normalizedFreq > threshold / 10) {
+                    ctx.fillText(`Electron Kinetic Energy: ${((normalizedFreq - threshold / 10) * 10).toFixed(1)} eV`, 20, 70);
+                } else {
+                    ctx.fillText('No electrons emitted below threshold frequency', 20, 70);
+                }
+            }
+
+            function togglePhotoelectricAnimation() {
+                if (photoelectricAnimationId) {
+                    cancelAnimationFrame(photoelectricAnimationId);
+                    photoelectricAnimationId = null;
+                } else {
+                    animatePhotoelectric();
+                }
+            }
+
+            function animatePhotoelectric() {
+                updatePhotoelectricSimulation();
+                photoelectricAnimationId = requestAnimationFrame(animatePhotoelectric);
+            }
+
+            // Compton, Davisson-Germer, and Stern-Gerlach Experiment Simulations
+            // (implementation of remaining simulations follows the same pattern)
+
+            // Compton Scattering Simulation
+            let comptonAnimationId = null;
+            let comptonTime = 0;
+            let photons = [];
+            let comptonElectrons = [];
+
+            function initComptonSimulation() {
+                const canvas = document.getElementById('comptonCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Initial setup
+                updateComptonSimulation();
+            }
+
+            function updateComptonSimulation() {
+                const canvas = document.getElementById('comptonCanvas');
+                const ctx = canvas.getContext('2d');
+                const angle = document.getElementById('scatteringAngle').value;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw the apparatus
+                drawComptonApparatus(ctx, canvas.width, canvas.height);
+                
+                // Draw photons and electrons
+                drawComptonInteraction(ctx, canvas.width, canvas.height, parseFloat(angle), comptonTime);
+                
+                // Draw information
+                drawComptonInfo(ctx, canvas.width, canvas.height, parseFloat(angle));
+            }
+
+            function drawComptonApparatus(ctx, width, height) {
+                // Draw X-ray source
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(20, height / 2 - 15, 15, 30);
+                
+                // Draw target material (graphite or other carbon target)
+                ctx.fillStyle = '#34495e';
+                ctx.beginPath();
+                ctx.arc(width / 2, height / 2, 30, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Draw detector at adjustable angle
+                const angle = document.getElementById('scatteringAngle').value * Math.PI / 180;
+                const detectorX = width / 2 + Math.cos(angle) * width / 3;
+                const detectorY = height / 2 - Math.sin(angle) * height / 3;
+                
+                ctx.fillStyle = '#3498db';
+                ctx.beginPath();
+                ctx.arc(detectorX, detectorY, 15, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Draw angle guide
+                ctx.strokeStyle = '#95a5a6';
+                ctx.setLineDash([5, 5]);
+                ctx.beginPath();
+                ctx.arc(width / 2, height / 2, 60, 0, angle);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Draw angle label
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                const labelX = width / 2 + Math.cos(angle / 2) * 80;
+                const labelY = height / 2 - Math.sin(angle / 2) * 80;
+                ctx.fillText(`${document.getElementById('scatteringAngle').value}°`, labelX, labelY);
+            }
+
+            function drawComptonInteraction(ctx, width, height, angle, time) {
+                const angleRad = angle * Math.PI / 180;
+                
+                // Add new incident photon occasionally
+                if (Math.random() < 0.05) {
+                    photons.push({
+                        x: 35,
+                        y: height / 2,
+                        vx: 3,
+                        vy: 0,
+                        energy: 1,
+                        scattered: false
+                    });
+                }
+                
+                // Draw and update photons
+                for (let i = 0; i < photons.length; i++) {
+                    const p = photons[i];
+                    
+                    // Update position
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    
+                    // Check if photon hits target
+                    const distToCenter = Math.sqrt(Math.pow(p.x - width / 2, 2) + Math.pow(p.y - height / 2, 2));
+                    
+                    if (distToCenter < 30 && !p.scattered) {
+                        // Scatter the photon
+                        p.scattered = true;
+                        
+                        // Calculate new direction based on scattering angle
+                        p.vx = 2 * Math.cos(angleRad);
+                        p.vy = -2 * Math.sin(angleRad);
+                        
+                        // Reduce energy (wavelength increases)
+                        p.energy = 1 / (1 + (1 - Math.cos(angleRad)) / 137);
+                        
+                        // Create recoil electron
+                        comptonElectrons.push({
+                            x: p.x,
+                            y: p.y,
+                            vx: 1.5 * Math.cos(angleRad + Math.PI / 2),
+                            vy: -1.5 * Math.sin(angleRad + Math.PI / 2),
+                            age: 0
+                        });
+                    }
+                    
+                    // Draw photon (size represents energy)
+                    const size = p.scattered ? 3 * p.energy : 3;
+                    
+                    // Color based on scattered status
+                    ctx.fillStyle = p.scattered ? '#f39c12' : '#e74c3c';
+                    
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Show photon path
+                    ctx.strokeStyle = p.scattered ? 'rgba(243, 156, 18, 0.3)' : 'rgba(231, 76, 60, 0.3)';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p.x - p.vx * 5, p.y - p.vy * 5);
+                    ctx.stroke();
+                    
+                    // Remove photons that leave the canvas
+                    if (p.x < 0 || p.x > width || p.y < 0 || p.y > height) {
+                        photons.splice(i, 1);
+                        i--;
+                    }
+                }
+                
+                // Draw and update electrons
+                ctx.fillStyle = '#3498db';
+                for (let i = 0; i < comptonElectrons.length; i++) {
+                    const e = comptonElectrons[i];
+                    
+                    // Update position
+                    e.x += e.vx;
+                    e.y += e.vy;
+                    e.age++;
+                    
+                    // Draw electron
+                    ctx.beginPath();
+                    ctx.arc(e.x, e.y, 2, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Show electron path
+                    ctx.strokeStyle = 'rgba(52, 152, 219, 0.3)';
+                    ctx.beginPath();
+                    ctx.moveTo(e.x, e.y);
+                    ctx.lineTo(e.x - e.vx * 3, e.y - e.vy * 3);
+                    ctx.stroke();
+                    
+                    // Remove old electrons
+                    if (e.age > 50 || e.x < 0 || e.x > width || e.y < 0 || e.y > height) {
+                        comptonElectrons.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+
+            function drawComptonInfo(ctx, width, height, angle) {
+                const angleRad = angle * Math.PI / 180;
+                
+                // Calculate wavelength shift
+                const h = 6.626e-34; // Planck's constant
+                const me = 9.109e-31; // Electron mass
+                const c = 2.998e8; // Speed of light
+                
+                const lambdaCompton = h / (me * c); // Compton wavelength (2.43 pm)
+                const wavelengthShift = lambdaCompton * (1 - Math.cos(angleRad));
+                
+                // Display information
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Scattering Angle: ${angle.toFixed(0)}°`, 20, 30);
+                ctx.fillText(`Wavelength Shift: ${(wavelengthShift * 1e12).toFixed(3)} pm`, 20, 50);
+                ctx.fillText(`Energy Transfer: ${((1 - 1 / (1 + (1 - Math.cos(angleRad)) / 137)) * 100).toFixed(1)}%`, 20, 70);
+            }
+
+            function toggleComptonAnimation() {
+                if (comptonAnimationId) {
+                    cancelAnimationFrame(comptonAnimationId);
+                    comptonAnimationId = null;
+                } else {
+                    animateCompton();
+                }
+            }
+
+            function animateCompton() {
+                comptonTime += 0.1;
+                updateComptonSimulation();
+                comptonAnimationId = requestAnimationFrame(animateCompton);
+            }
+
+            // Davisson-Germer Experiment Simulation
+            let dgAnimationId = null;
+            let dgTime = 0;
+            let dgElectrons = [];
+            let diffractionPattern = [];
+
+            function initDGSimulation() {
+                const canvas = document.getElementById('dgCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Initialize diffraction pattern array
+                diffractionPattern = new Array(360).fill(0);
+                
+                // Initial setup
+                updateDGSimulation();
+            }
+
+            function updateDGSimulation() {
+                const canvas = document.getElementById('dgCanvas');
+                const ctx = canvas.getContext('2d');
+                const energy = document.getElementById('electronEnergy').value;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw the apparatus
+                drawDGApparatus(ctx, canvas.width, canvas.height);
+                
+                // Draw electrons
+                drawDGElectrons(ctx, canvas.width, canvas.height, parseFloat(energy), dgTime);
+                
+                // Draw diffraction pattern
+                drawDiffraction(ctx, canvas.width, canvas.height, parseFloat(energy));
+            }
+
+            function drawDGApparatus(ctx, width, height) {
+                // Draw electron gun
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(20, height / 2 - 10, 20, 20);
+                
+                // Draw electron beam guide
+                ctx.strokeStyle = '#95a5a6';
+                ctx.setLineDash([5, 5]);
+                ctx.beginPath();
+                ctx.moveTo(40, height / 2);
+                ctx.lineTo(width / 2 - 50, height / 2);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Draw crystal (nickel crystal)
+                ctx.fillStyle = '#7f8c8d';
+                ctx.beginPath();
+                ctx.arc(width / 2, height / 2, 30, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Draw crystal lattice structure (simplified)
+                ctx.strokeStyle = '#ecf0f1';
+                ctx.lineWidth = 1;
+                const latticeSize = 8;
+                
+                for (let i = -3; i <= 3; i++) {
+                    for (let j = -3; j <= 3; j++) {
+                        ctx.beginPath();
+                        ctx.arc(width / 2 + i * latticeSize, height / 2 + j * latticeSize, 2, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+                }
+                
+                // Draw detector arc
+                ctx.strokeStyle = '#3498db';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.arc(width / 2, height / 2, width / 3, 0, Math.PI);
+                ctx.stroke();
+            }
+
+            function drawDGElectrons(ctx, width, height, energy, time) {
+                const normalizedEnergy = energy / 100; // Scale to 0-1
+                const wavelength = 1.22 / Math.sqrt(normalizedEnergy); // de Broglie wavelength (scaled)
+                
+                // Add new electrons occasionally
+                if (Math.random() < 0.1) {
+                    dgElectrons.push({
+                        x: 40,
+                        y: height / 2,
+                        vx: 2 + normalizedEnergy * 2,
+                        vy: 0,
+                        diffracted: false,
+                        angle: 0
+                    });
+                }
+                
+                // Update and draw electrons
+                ctx.fillStyle = '#3498db';
+                
+                for (let i = 0; i < dgElectrons.length; i++) {
+                    const e = dgElectrons[i];
+                    
+                    // Update position
+                    e.x += e.vx;
+                    e.y += e.vy;
+                    
+                    // Check if electron hits crystal
+                    const distToCenter = Math.sqrt(Math.pow(e.x - width / 2, 2) + Math.pow(e.y - height / 2, 2));
+                    
+                    if (distToCenter < 30 && !e.diffracted) {
+                        // Diffract the electron
+                        e.diffracted = true;
+                        
+                        // Calculate diffraction angle based on Bragg's law and de Broglie wavelength
+                        // Simplified: different angles are more likely at certain wavelengths
+                        const latticeSpacing = 0.215; // Nickel lattice spacing in nm (scaled)
+                        const diffAngle = Math.asin(wavelength / (2 * latticeSpacing));
+                        
+                        // Add some randomness to the diffraction angle
+                        e.angle = diffAngle * (0.8 + Math.random() * 0.4);
+                        
+                        // More likely to scatter at certain angles (Bragg peaks)
+                        if (Math.random() < 0.3) {
+                            e.angle = Math.round(e.angle * 5) / 5;
+                        }
+                        
+                        // Calculate new direction
+                        const scatterAngle = (Math.random() < 0.5 ? e.angle : -e.angle) + Math.PI / 2;
+                        e.vx = Math.cos(scatterAngle) * (1 + normalizedEnergy);
+                        e.vy = -Math.sin(scatterAngle) * (1 + normalizedEnergy);
+                        
+                        // Record in diffraction pattern
+                        const patternAngle = Math.round((scatterAngle * 180 / Math.PI) % 360);
+                        diffractionPattern[patternAngle] += 1;
+                    }
+                    
+                    // Draw electron
+                    ctx.beginPath();
+                    ctx.arc(e.x, e.y, 2, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Remove electrons that leave the canvas
+                    if (e.x < 0 || e.x > width || e.y < 0 || e.y > height) {
+                        dgElectrons.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+
+            function drawDiffraction(ctx, width, height, energy) {
+                // Draw the diffraction pattern on the detector arc
+                const radius = width / 3;
+                
+                // Normalize the pattern for display
+                const maxIntensity = Math.max(...diffractionPattern);
+                
+                for (let angle = 0; angle < 180; angle++) {
+                    const intensity = diffractionPattern[angle] / (maxIntensity || 1);
+                    
+                    const radians = angle * Math.PI / 180;
+                    const x = width / 2 + radius * Math.cos(radians);
+                    const y = height / 2 - radius * Math.sin(radians);
+                    
+                    // Draw detection point
+                    ctx.fillStyle = `rgba(52, 152, 219, ${intensity})`;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 3 + intensity * 5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                
+                // Display information
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Electron Energy: ${energy} eV`, 20, 30);
+                
+                const wavelength = 1.22 / Math.sqrt(energy / 100);
+                ctx.fillText(`de Broglie Wavelength: ${wavelength.toFixed(2)} Å`, 20, 50);
+                
+                // Find the main diffraction peak
+                let peakAngle = 0;
+                let peakIntensity = 0;
+                
+                for (let angle = 0; angle < 180; angle++) {
+                    if (diffractionPattern[angle] > peakIntensity) {
+                        peakIntensity = diffractionPattern[angle];
+                        peakAngle = angle;
+                    }
+                }
+                
+                ctx.fillText(`Main Diffraction Peak: ${peakAngle}°`, 20, 70);
+            }
+
+            function toggleDGAnimation() {
+                if (dgAnimationId) {
+                    cancelAnimationFrame(dgAnimationId);
+                    dgAnimationId = null;
+                } else {
+                    animateDG();
+                }
+            }
+
+            function animateDG() {
+                dgTime += 0.1;
+                updateDGSimulation();
+                dgAnimationId = requestAnimationFrame(animateDG);
+            }
+
+            // Stern-Gerlach Experiment Simulation
+            let sgAnimationId = null;
+            let sgTime = 0;
+            let sgAtoms = [];
+            let upCount = 0;
+            let downCount = 0;
+
+            function initSGSimulation() {
+                const canvas = document.getElementById('sgCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Reset counters
+                upCount = 0;
+                downCount = 0;
+                
+                // Initial setup
+                updateSGSimulation();
+            }
+
+            function updateSGSimulation() {
+                const canvas = document.getElementById('sgCanvas');
+                const ctx = canvas.getContext('2d');
+                const fieldStrength = document.getElementById('magneticField').value;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw the apparatus
+                drawSGApparatus(ctx, canvas.width, canvas.height, parseFloat(fieldStrength));
+                
+                // Draw atoms
+                drawSGAtoms(ctx, canvas.width, canvas.height, parseFloat(fieldStrength), sgTime);
+                
+                // Draw statistics
+                drawSGStats(ctx, canvas.width, canvas.height);
+            }
+
+            function drawSGApparatus(ctx, width, height, fieldStrength) {
+                // Draw oven (atom source)
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(20, height / 2 - 20, 20, 40);
+                
+                // Draw collimator
+                ctx.fillStyle = '#34495e';
+                ctx.fillRect(60, height / 2 - 10, 20, 20);
+                ctx.beginPath();
+                ctx.moveTo(80, height / 2 - 10);
+                ctx.lineTo(100, height / 2 - 5);
+                ctx.lineTo(100, height / 2 + 5);
+                ctx.lineTo(80, height / 2 + 10);
+                ctx.closePath();
+                ctx.fill();
+                
+                // Draw magnet poles (N and S)
+                const magnetWidth = 100;
+                const magnetHeight = 60 + fieldStrength * 0.3;
+                const magnetGap = 20 - fieldStrength * 0.1;
+                
+                // North pole (top)
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillRect(width / 2 - magnetWidth / 2, height / 2 - magnetGap / 2 - magnetHeight, magnetWidth, magnetHeight);
+                
+                // South pole (bottom)
+                ctx.fillStyle = '#3498db';
+                ctx.fillRect(width / 2 - magnetWidth / 2, height / 2 + magnetGap / 2, magnetWidth, magnetHeight);
+                
+                // Label poles
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 20px Arial';
+                ctx.fillText('N', width / 2, height / 2 - magnetGap / 2 - magnetHeight / 2);
+                ctx.fillText('S', width / 2, height / 2 + magnetGap / 2 + magnetHeight / 2);
+                
+                // Draw field lines
+                ctx.strokeStyle = '#95a5a6';
+                ctx.lineWidth = 1;
+                
+                for (let i = 0; i < 5; i++) {
+                    const x = width / 2 - magnetWidth / 3 + (i * magnetWidth / 3);
+                    const y1 = height / 2 - magnetGap / 2;
+                    const y2 = height / 2 + magnetGap / 2;
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(x, y1);
+                    ctx.lineTo(x, y2);
+                    ctx.stroke();
+                    
+                    // Arrow pointing down (N → S)
+                    ctx.beginPath();
+                    ctx.moveTo(x, y2 - 10);
+                    ctx.lineTo(x - 5, y2 - 15);
+                    ctx.moveTo(x, y2 - 10);
+                    ctx.lineTo(x + 5, y2 - 15);
+                    ctx.stroke();
+                }
+                
+                // Draw detector screen
+                ctx.fillStyle = '#ecf0f1';
+                ctx.fillRect(width - 60, height / 4, 20, height / 2);
+                
+                // Magnetic field strength indicator
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Magnetic Field: ${fieldStrength}`, width / 2 - 60, height - 20);
+            }
+
+            function drawSGAtoms(ctx, width, height, fieldStrength, time) {
+                // Add new atoms occasionally
+                if (Math.random() < 0.05) {
+                    sgAtoms.push({
+                        x: 40,
+                        y: height / 2,
+                        vx: 2,
+                        vy: 0,
+                        spin: Math.random() < 0.5 ? 'up' : 'down',
+                        inField: false,
+                        detected: false
+                    });
+                }
+                
+                // Update and draw atoms
+                for (let i = 0; i < sgAtoms.length; i++) {
+                    const atom = sgAtoms[i];
+                    
+                    // Update position
+                    atom.x += atom.vx;
+                    
+                    // Check if atom enters magnetic field
+                    if (atom.x > width / 2 - 50 && atom.x < width / 2 + 50 && !atom.inField) {
+                        atom.inField = true;
+                        
+                        // Apply force based on spin and field strength
+                        if (atom.spin === 'up') {
+                            atom.vy = -fieldStrength * 0.05;
+                        } else {
+                            atom.vy = fieldStrength * 0.05;
+                        }
+                    }
+                    
+                    // Apply vertical velocity after entering field
+                    if (atom.inField) {
+                        atom.y += atom.vy;
+                    }
+                    
+                    // Check if atom hits detector
+                    if (atom.x > width - 60 && !atom.detected) {
+                        atom.detected = true;
+                        
+                        // Count up or down based on position
+                        if (atom.y < height / 2) {
+                            upCount++;
+                        } else {
+                            downCount++;
+                        }
+                    }
+                    
+                    // Draw atom with color based on spin
+                    ctx.fillStyle = atom.spin === 'up' ? '#e74c3c' : '#3498db';
+                    ctx.beginPath();
+                    ctx.arc(atom.x, atom.y, 4, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Draw spin direction with small arrow
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    if (atom.spin === 'up') {
+                        ctx.moveTo(atom.x, atom.y - 2);
+                        ctx.lineTo(atom.x, atom.y - 6);
+                        ctx.moveTo(atom.x - 2, atom.y - 4);
+                        ctx.lineTo(atom.x, atom.y - 6);
+                        ctx.lineTo(atom.x + 2, atom.y - 4);
+                    } else {
+                        ctx.moveTo(atom.x, atom.y + 2);
+                        ctx.lineTo(atom.x, atom.y + 6);
+                        ctx.moveTo(atom.x - 2, atom.y + 4);
+                        ctx.lineTo(atom.x, atom.y + 6);
+                        ctx.lineTo(atom.x + 2, atom.y + 4);
+                    }
+                    ctx.stroke();
+                    
+                    // Remove atoms that leave the canvas
+                    if (atom.x > width || atom.y < 0 || atom.y > height) {
+                        sgAtoms.splice(i, 1);
+                        i--;
+                    }
+                }
+                
+                // Draw detection patterns
+                ctx.fillStyle = 'rgba(231, 76, 60, 0.5)';
+                ctx.beginPath();
+                ctx.arc(width - 50, height / 3, 10 + (upCount / 5), 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = 'rgba(52, 152, 219, 0.5)';
+                ctx.beginPath();
+                ctx.arc(width - 50, height * 2/3, 10 + (downCount / 5), 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            function drawSGStats(ctx, width, height) {
+                // Display detection statistics
+                ctx.fillStyle = '#2c3e50';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Detected Spin Up: ${upCount}`, width - 150, 30);
+                ctx.fillText(`Detected Spin Down: ${downCount}`, width - 150, 50);
+                
+                const total = upCount + downCount;
+                if (total > 0) {
+                    const upPercent = (upCount / total * 100).toFixed(1);
+                    const downPercent = (downCount / total * 100).toFixed(1);
+                    ctx.fillText(`Up: ${upPercent}%  Down: ${downPercent}%`, width - 150, 70);
+                }
+            }
+
+            function toggleSGAnimation() {
+                if (sgAnimationId) {
+                    cancelAnimationFrame(sgAnimationId);
+                    sgAnimationId = null;
+                } else {
+                    animateSG();
+                }
+            }
+
+            function animateSG() {
+                sgTime += 0.1;
+                updateSGSimulation();
+                sgAnimationId = requestAnimationFrame(animateSG);
+            }
+
+            // Add to window.addEventListener('load') function
+            window.addEventListener('load', function() {
+                initClassicalWave();
+                initRelativisticSimulation();
+                initQuantumSimulation();
+                initDoubleslitSimulation();
+                initPhotoelectricSimulation();
+                
+                // Initialize the new simulations
+                initComptonSimulation();
+                initDGSimulation();
+                initSGSimulation();
+                
+                // Initialize other simulations
+                // if (typeof updateWaveSim === 'function') {
+                //     updateWaveSim();
+                // }
+                
+                // if (typeof updateDoubleSlitSim === 'function') {
+                //     updateDoubleSlitSim();
+                // }
+                
+                // if (typeof updateUncertaintySim === 'function') {
+                //     updateUncertaintySim();
+                // }
+                
+                // if (typeof updateWaveFunctionSim === 'function') {
+                //     updateWaveFunctionSim();
+                // }
+            });
+        </script>
+        <script src="quantum-simulations.js"></script>
